@@ -689,6 +689,7 @@ void Client::Tick()
 				this->messageOfTheDay = messageOfTheDay.Value();
 				notifyMessageOfTheDay();
 
+#define IGNORE_UPDATES
 #ifndef IGNORE_UPDATES
 				//Check for updates
 				json::Object versions = objDocument["Updates"];
