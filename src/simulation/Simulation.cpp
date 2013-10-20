@@ -3121,6 +3121,9 @@ int Simulation::create_part(int p, int x, int y, int tv)
 				parts[i].tmp2 = 4;
 				break;
 			}
+			case PT_LANG:
+				parts[i].tmp = 4;
+				break;
 			default:
 				break;
 		}
