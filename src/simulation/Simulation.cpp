@@ -2821,6 +2821,10 @@ int Simulation::create_part(int p, int x, int y, int tv)
 					parts[pmap[y][x]>>8].tmp2 = v;
 				parts[pmap[y][x]>>8].temp = elements[t].Temperature;
 			}
+			else if (drawOn == PT_POWR && (t == PT_PRTI || t == PT_PRTO))
+			{
+				parts[pmap[y][x]>>8].ctype = t;
+			}
 			return -1;
 		}
 		else if (IsWallBlocking(x, y, t))
