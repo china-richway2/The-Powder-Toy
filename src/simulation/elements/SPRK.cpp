@@ -272,10 +272,6 @@ int Element_SPRK::update(UPDATE_FUNC_ARGS)
 					if (receiver==PT_PSCN||receiver==PT_NSCN||receiver==PT_WATR||receiver==PT_SLTW||receiver==PT_NTCT||receiver==PT_PTCT||receiver==PT_INWR)
 						continue;
 					break;
-				case PT_ETRD:
-					if (receiver==PT_METL||receiver==PT_BMTL||receiver==PT_BRMT||receiver==PT_LRBD||receiver==PT_RBDM||receiver==PT_PSCN||receiver==PT_NSCN)
-						goto conduct;
-					continue;
 				case PT_NTCT:
 					if (receiver==PT_PSCN || (receiver==PT_NSCN && parts[i].temp>373.0f))
 						goto conduct;
